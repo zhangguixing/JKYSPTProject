@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.B509.JKGLPT.mapper.OrdersMapper">
+
+	<resultMap type="com.B509.JKGLPT.Vo.OrdersVO" id="OrdersVO">
+		<result column="id" property="id" />
+		<result column="drugs_id" property="drugsId" />
+		<result column="drugs_name" property="drugsName" />
+		<result column="drugs_pic" property="drugsPic" />
+		<result column="drugs_price" property="drugsPrice" />
+		<result column="num" property="num" />
+	</resultMap>
+	<!-- 查询订单详情 -->
+	<select id="findOrdersVOByUserId" parameterType="Integer"
+		resultMap="OrdersVO">
+		SELECT
+		o.id,
+		d.drugs_id,
+		d.drugs_name,
+		d.drugs_pic,
+		d.drugs_price,
+		o.num
+		FROM
+		drugs d,
+		orders o
+		WHERE
+		o.drugs_id = d.drugs_id
+		AND o.user_id = #{id}
+		AND o.`status` = 0
+	</select>
+
+	<!--更新药物信息 -->
+	<update id="upateOrdersStatus" parameterType="Orders">
+		UPDATE orders
+		SET status = 1,
+		receiver_id = ${receiverId}
+		WHERE
+		status=0
+		AND user_id = ${userId}
+	</update>
+</mapper>

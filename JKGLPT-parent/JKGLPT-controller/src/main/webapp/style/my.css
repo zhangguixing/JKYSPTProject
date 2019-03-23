@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+/*自定义css样式*/
+
+/*定义购物车商品复选框位置*/
+.cartchk{
+	position:relative;
+	left:-113px;
+	top:48px;
+}
+.introPic{
+	position:relative;
+	left:-7px;
+	top:48px;
+	width: 250px;
+	height: 250px;
+}
+.introPic2{
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+.myColor{
+	color: #fff;
+	line-height: 35px;
+	font-size: 14px;
+}
+.mySeasonPic{
+	margin-top:5px;
+	width: 216px;
+	height: 50px;
+}

@@ -1,0 +1,184 @@
+[INFO] [2018-04-04 11:20:36][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+    [INFO] [2018-04-04 11:20:36][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Apr 04 11:20:36 CST 2018]; root of context hierarchy
+    [INFO] [2018-04-04 11:20:36][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-dao.xml]
+    [INFO] [2018-04-04 11:20:36][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-mybatis.xml]
+    [INFO] [2018-04-04 11:20:36][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-tx.xml]
+    [INFO] [2018-04-04 11:20:36][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext.xml]
+    [INFO] [2018-04-04 11:20:36][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+    [INFO] [2018-04-04 11:20:37][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [ERROR] [2018-04-04 11:20:37][org.springframework.web.context.ContextLoader]Context initialization failed
+    org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-mybatis.xml]: Initialization of bean failed; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert property value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]' for property 'mapperLocations'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:mybatis/mapper/*.xml]: class path resource [mybatis/mapper/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:681)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.startup.Embedded.start(Embedded.java:825)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.startContainer(AbstractRunMojo.java:558)
+	at org.codehaus.mojo.tomcat.AbstractRunMojo.execute(AbstractRunMojo.java:255)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.springframework.beans.TypeMismatchException: Failed to convert property value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]' for property 'mapperLocations'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:mybatis/mapper/*.xml]: class path resource [mybatis/mapper/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.BeanWrapperImpl.convertIfNecessary(BeanWrapperImpl.java:479)
+	at org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:511)
+	at org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.convertForProperty(AbstractAutowireCapableBeanFactory.java:1502)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1461)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	... 42 more
+Caused by: java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:mybatis/mapper/*.xml]: class path resource [mybatis/mapper/] cannot be resolved to URL because it does not exist
+	at org.springframework.core.io.support.ResourceArrayPropertyEditor.setAsText(ResourceArrayPropertyEditor.java:140)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:430)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:403)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:181)
+	at org.springframework.beans.BeanWrapperImpl.convertIfNecessary(BeanWrapperImpl.java:459)
+	... 48 more
+[INFO] [2018-04-04 11:23:37][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+    [INFO] [2018-04-04 11:23:38][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Apr 04 11:23:38 CST 2018]; root of context hierarchy
+    [INFO] [2018-04-04 11:23:38][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-dao.xml]
+    [INFO] [2018-04-04 11:23:38][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-mybatis.xml]
+    [INFO] [2018-04-04 11:23:38][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-tx.xml]
+    [INFO] [2018-04-04 11:23:38][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext.xml]
+    [INFO] [2018-04-04 11:23:38][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+    [INFO] [2018-04-04 11:23:38][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 11:23:39][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 2013 ms
+    [INFO] [2018-04-04 11:23:40][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+    [INFO] [2018-04-04 11:23:40][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Apr 04 11:23:40 CST 2018]; parent: Root WebApplicationContext
+    [INFO] [2018-04-04 11:23:40][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [springmvc/spring-mvc.xml]
+    [INFO] [2018-04-04 11:23:40][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 11:23:40][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/page/{pageName}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.PageController.toPage(java.lang.String)
+    [INFO] [2018-04-04 11:23:40][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.register(com.B509.JKGLPT.pojo.User)
+    [INFO] [2018-04-04 11:23:40][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.update(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession)
+    [INFO] [2018-04-04 11:23:40][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.login(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession,org.springframework.ui.Model)
+    [INFO] [2018-04-04 11:23:40][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+    [INFO] [2018-04-04 11:23:40][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 661 ms
+    [INFO] [2018-04-04 11:26:13][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+    [INFO] [2018-04-04 11:26:13][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Apr 04 11:26:13 CST 2018]; root of context hierarchy
+    [INFO] [2018-04-04 11:26:13][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-dao.xml]
+    [INFO] [2018-04-04 11:26:13][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-mybatis.xml]
+    [INFO] [2018-04-04 11:26:13][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-tx.xml]
+    [INFO] [2018-04-04 11:26:13][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext.xml]
+    [INFO] [2018-04-04 11:26:14][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+    [INFO] [2018-04-04 11:26:14][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 11:26:14][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1625 ms
+    [INFO] [2018-04-04 11:26:15][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+    [INFO] [2018-04-04 11:26:15][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Apr 04 11:26:15 CST 2018]; parent: Root WebApplicationContext
+    [INFO] [2018-04-04 11:26:15][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [springmvc/spring-mvc.xml]
+    [INFO] [2018-04-04 11:26:15][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 11:26:15][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/page/{pageName}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.PageController.toPage(java.lang.String)
+    [INFO] [2018-04-04 11:26:15][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.register(com.B509.JKGLPT.pojo.User)
+    [INFO] [2018-04-04 11:26:15][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.update(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession)
+    [INFO] [2018-04-04 11:26:15][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.login(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession,org.springframework.ui.Model)
+    [INFO] [2018-04-04 11:26:15][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+    [INFO] [2018-04-04 11:26:15][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 553 ms
+    [INFO] [2018-04-04 11:26:44][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+    [INFO] [2018-04-04 11:26:45][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Apr 04 11:26:45 CST 2018]; root of context hierarchy
+    [INFO] [2018-04-04 11:26:45][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-dao.xml]
+    [INFO] [2018-04-04 11:26:45][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-mybatis.xml]
+    [INFO] [2018-04-04 11:26:45][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-tx.xml]
+    [INFO] [2018-04-04 11:26:45][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext.xml]
+    [INFO] [2018-04-04 11:26:45][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+    [INFO] [2018-04-04 11:26:45][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 11:26:46][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1454 ms
+    [INFO] [2018-04-04 11:26:46][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+    [INFO] [2018-04-04 11:26:46][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Apr 04 11:26:46 CST 2018]; parent: Root WebApplicationContext
+    [INFO] [2018-04-04 11:26:46][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [springmvc/spring-mvc.xml]
+    [INFO] [2018-04-04 11:26:46][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 11:26:47][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/page/{pageName}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.PageController.toPage(java.lang.String)
+    [INFO] [2018-04-04 11:26:47][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.register(com.B509.JKGLPT.pojo.User)
+    [INFO] [2018-04-04 11:26:47][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.update(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession)
+    [INFO] [2018-04-04 11:26:47][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.login(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession,org.springframework.ui.Model)
+    [INFO] [2018-04-04 11:26:47][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+    [INFO] [2018-04-04 11:26:47][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 575 ms
+    [INFO] [2018-04-04 13:24:22][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+    [INFO] [2018-04-04 13:24:22][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Apr 04 13:24:22 CST 2018]; root of context hierarchy
+    [INFO] [2018-04-04 13:24:22][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-dao.xml]
+    [INFO] [2018-04-04 13:24:22][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-mybatis.xml]
+    [INFO] [2018-04-04 13:24:22][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-tx.xml]
+    [INFO] [2018-04-04 13:24:22][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext.xml]
+    [INFO] [2018-04-04 13:24:22][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+    [INFO] [2018-04-04 13:24:22][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 13:24:23][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1682 ms
+    [INFO] [2018-04-04 13:24:24][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+    [INFO] [2018-04-04 13:24:24][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Apr 04 13:24:24 CST 2018]; parent: Root WebApplicationContext
+    [INFO] [2018-04-04 13:24:24][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [springmvc/spring-mvc.xml]
+    [INFO] [2018-04-04 13:24:24][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 13:24:24][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/page/{pageName}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.PageController.toPage(java.lang.String)
+    [INFO] [2018-04-04 13:24:24][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.register(com.B509.JKGLPT.pojo.User)
+    [INFO] [2018-04-04 13:24:24][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.update(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession)
+    [INFO] [2018-04-04 13:24:24][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.login(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession,org.springframework.ui.Model)
+    [INFO] [2018-04-04 13:24:24][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+    [INFO] [2018-04-04 13:24:24][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 521 ms
+    [INFO] [2018-04-04 13:25:07][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+    [INFO] [2018-04-04 13:25:07][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Apr 04 13:25:07 CST 2018]; root of context hierarchy
+    [INFO] [2018-04-04 13:25:07][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-dao.xml]
+    [INFO] [2018-04-04 13:25:08][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-mybatis.xml]
+    [INFO] [2018-04-04 13:25:08][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-tx.xml]
+    [INFO] [2018-04-04 13:25:08][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext.xml]
+    [INFO] [2018-04-04 13:25:08][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+    [INFO] [2018-04-04 13:25:08][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 13:25:09][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1701 ms
+    [INFO] [2018-04-04 13:25:09][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+    [INFO] [2018-04-04 13:25:09][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Apr 04 13:25:09 CST 2018]; parent: Root WebApplicationContext
+    [INFO] [2018-04-04 13:25:09][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [springmvc/spring-mvc.xml]
+    [INFO] [2018-04-04 13:25:10][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 13:25:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/page/{pageName}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.PageController.toPage(java.lang.String)
+    [INFO] [2018-04-04 13:25:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.register(com.B509.JKGLPT.pojo.User)
+    [INFO] [2018-04-04 13:25:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.update(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession)
+    [INFO] [2018-04-04 13:25:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.login(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession,org.springframework.ui.Model)
+    [INFO] [2018-04-04 13:25:10][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+    [INFO] [2018-04-04 13:25:10][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 650 ms
+    [INFO] [2018-04-04 13:30:31][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+    [INFO] [2018-04-04 13:30:32][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Wed Apr 04 13:30:32 CST 2018]; root of context hierarchy
+    [INFO] [2018-04-04 13:30:32][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-dao.xml]
+    [INFO] [2018-04-04 13:30:32][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-mybatis.xml]
+    [INFO] [2018-04-04 13:30:32][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext-tx.xml]
+    [INFO] [2018-04-04 13:30:32][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Workspaces\JKGLPTWorkspace\JKGLPT-parent\JKGLPT-controller\target\classes\spring\applicationContext.xml]
+    [INFO] [2018-04-04 13:30:32][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+    [INFO] [2018-04-04 13:30:32][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 13:30:33][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1649 ms
+    [INFO] [2018-04-04 13:30:33][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+    [INFO] [2018-04-04 13:30:33][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Apr 04 13:30:33 CST 2018]; parent: Root WebApplicationContext
+    [INFO] [2018-04-04 13:30:33][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [springmvc/spring-mvc.xml]
+    [INFO] [2018-04-04 13:30:33][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+    [INFO] [2018-04-04 13:30:34][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/page/{pageName}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.PageController.toPage(java.lang.String)
+    [INFO] [2018-04-04 13:30:34][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.register(com.B509.JKGLPT.pojo.User)
+    [INFO] [2018-04-04 13:30:34][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.update(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession)
+    [INFO] [2018-04-04 13:30:34][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/user],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.B509.JKGLPT.controller.UserController.login(com.B509.JKGLPT.pojo.User,javax.servlet.http.HttpSession,org.springframework.ui.Model)
+    [INFO] [2018-04-04 13:30:34][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+    [INFO] [2018-04-04 13:30:34][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 554 ms
+    

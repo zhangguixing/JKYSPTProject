@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+}
+
+img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+input, select, textarea {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+  	text-align: center;
+}
+
+.fr {
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+h3{
+	font-size: 1.5em;
+	font-family: serif;
+}

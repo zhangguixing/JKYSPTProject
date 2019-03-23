@@ -1,0 +1,42 @@
+﻿body{background-color:#fff;font-family:\5FAE\8F6F\96C5\9ED1;}
+
+
+
+/*右侧*/
+
+/*选项卡*/
+/*头部*/
+.search_bar .search_ipt{box-shadow:1px 1px 1px #dedddd inset;}
+.search_bar{padding:6px 0 0 71px;width:630px;}
+.search_bar .search_ipt{width:389px;}
+.search_bar .ask_btn{background-color:#f4f4f4;}
+.search_bar .btn_current{background-color:#72c01d;}
+.search_bar .serach_btn{margin:0;border-left:0;}
+.askbox{width:408px;left:71px;top:6px;}
+.askbox textarea{width:388px;}
+.nav_wrap{background:#15a6e7;height:46px;line-height:46px;border:0;}
+.nav_bar{line-height:46px;height:46px;border:0;}
+.nav_list li a, .nav_list li{color: #fff;}
+.nav_list li.current a, .nav_list li a:hover,.nav_list li.active a{background-color:#0d8ec8;}
+.nav_list li.question_nav a{background-position:73px -104px;}
+.nav_list li.question_nav a:hover, .nav_list li.current a.active{color:#fff; background:#0d8ec8 url(../images/sprite_icon.png) no-repeat 73px -104px;}
+.question_nav .question_fl{background-color:#0d8ec8;color:#fff;border:none;}
+.question_nav .question_fl ul{border-right:1px solid #4da6ce;}
+.nav_r a,.nav_r a:hover{color:#fff;}
+.nav_r .user_layer .blue408-a a:hover{color:#4083a9;}
+.ad_1000x90,.ad_1000x90 img{width:1000px;}
+.question_nav .question_fl ul li a, .question_nav .question_fl ul li a:hover{color:#fff;}
+
+
+
+.zhuolu .zt_hd{height:34px; line-height:34px; margin-top:4px; border:0; padding:0}
+.zhuolu .zt_hd span{color:#666666;font-family:\5FAE\8F6F\96C5\9ED1;font-size:20px;cursor:pointer;padding:2px 0 0; line-height:33px; margin-right:30px;}
+.zhuolu .zt_hd span.active{color:#199a3f;border-top:0;}
+.zhuolu .zt_hd span:hover{color:#666666;}
+.mbt{ margin-bottom:0;}
+.mtb{ margin-top:15px;}
+.zhuolu { background:#fff;}
+.pa{ position:absolute; }
+.db{ display:block; }
+
+
